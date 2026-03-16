@@ -18,12 +18,19 @@ def get_trending_topics(platform: str) -> str:
     # Your actual implementation here
     return f"Trending topics for {platform}: AI art, productivity tips, behind-the-scenes content"
 
+@tool
+def get_content_ideas(topic: str) -> str:
+    """Generate content ideas for a given topic.
+    Use this when the user asks for content ideas or post suggestions."""
+    # Your actual implementation here
+    return f"Content ideas for {topic}: 1. Viral TikTok dance tutorial, 2. Behind-the-scenes vlog, 3. Quick tips video"
+
 system_prompt = """You are AlgoRhythm, a content creator assistant.
 You help creators plan posts, choose hashtags, and identify trending topics.
 Use your tools when the user asks about trends or platform-specific content."""
 
 agent = create_react_agent(
     model=llm,
-    tools=[get_trending_topics],
+    tools=[get_trending_topics, get_content_ideas],
     prompt=system_prompt
 )
