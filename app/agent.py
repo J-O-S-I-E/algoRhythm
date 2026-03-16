@@ -23,7 +23,7 @@ def get_content_ideas(topic: str) -> str:
     """Generate content ideas for a given topic.
     Use this when the user asks for content ideas or post suggestions."""
     # Your actual implementation here
-    return f"Content ideas for {topic}: 1. Viral TikTok dance tutorial, 2. Behind-the-scenes vlog, 3. Quick tips video"
+    return f"Content ideas for {topic}: 1. HIIT workout routine, 2. Healthy meal prep tutorial, 3. Motivation tips for staying fit"
 
 system_prompt = """You are AlgoRhythm, a content creator assistant.
 You help creators plan posts, choose hashtags, and identify trending topics.
